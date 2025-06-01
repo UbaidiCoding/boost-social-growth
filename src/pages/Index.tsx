@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Star, Users, TrendingUp, Shield, Award, CheckCircle, Play, Instagram, Facebook, Youtube, Twitter } from 'lucide-react';
+import { Star, Users, TrendingUp, Shield, Award, CheckCircle, Play, Instagram, Facebook, Youtube, Twitter, Eye, Heart, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -16,6 +15,13 @@ const Index = () => {
     { name: 'Ahmed Khan', rating: 5, text: 'Amazing service! Got 5000 real followers in just 2 days.' },
     { name: 'Sara Ali', rating: 5, text: 'Best investment for my business. Highly recommended!' },
     { name: 'Muhammad Hassan', rating: 4, text: 'Great results and excellent customer support.' }
+  ];
+
+  const demoStats = [
+    { label: 'Instagram Followers', value: '10,247', icon: Users, platform: 'instagram' },
+    { label: 'Video Views', value: '5,832', icon: Play, platform: 'youtube' },
+    { label: 'Post Likes', value: '2,156', icon: Heart, platform: 'instagram' },
+    { label: 'Comments', value: '847', icon: MessageCircle, platform: 'facebook' }
   ];
 
   return (
@@ -103,25 +109,113 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Demo Account Section */}
+      {/* Live Demo Account Section */}
       <section className="px-4 py-20 bg-white/5 backdrop-blur-sm">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-8">See Real Results</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-              <CardContent className="p-8">
-                <Users className="w-12 h-12 text-pink-400 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-2">10,000+</h3>
-                <p className="text-gray-300">Real Followers</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-              <CardContent className="p-8">
-                <Play className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-2">5,000+</h3>
-                <p className="text-gray-300">Video Views</p>
-              </CardContent>
-            </Card>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="flex justify-center items-center space-x-2 mb-4">
+              <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+              <span className="text-green-400 font-semibold">LIVE DEMO ACCOUNT</span>
+            </div>
+            <h2 className="text-4xl font-bold text-white mb-4">See Real Results in Action</h2>
+            <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+              This is a live demo account showing real followers and engagement. 
+              See exactly what you'll get when you purchase our services.
+            </p>
+          </div>
+
+          {/* Demo Stats Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            {demoStats.map((stat, index) => (
+              <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 hover:scale-105 transition-transform duration-300">
+                <CardContent className="p-6 text-center">
+                  <div className="flex justify-center mb-4">
+                    <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
+                      stat.platform === 'instagram' ? 'bg-pink-500/20' :
+                      stat.platform === 'youtube' ? 'bg-red-500/20' :
+                      'bg-blue-500/20'
+                    }`}>
+                      <stat.icon className={`w-6 h-6 ${
+                        stat.platform === 'instagram' ? 'text-pink-400' :
+                        stat.platform === 'youtube' ? 'text-red-400' :
+                        'text-blue-400'
+                      }`} />
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">{stat.value}</h3>
+                  <p className="text-gray-300 text-sm">{stat.label}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Demo Account Preview */}
+          <Card className="bg-white/10 backdrop-blur-sm border-white/20 mb-8">
+            <CardContent className="p-8">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-4">Demo Account: @socialboost_demo</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between p-4 bg-white/5 rounded-lg">
+                      <div className="flex items-center space-x-3">
+                        <Instagram className="w-6 h-6 text-pink-400" />
+                        <span className="text-white">Instagram Followers</span>
+                      </div>
+                      <span className="text-2xl font-bold text-pink-400">10.2K</span>
+                    </div>
+                    <div className="flex items-center justify-between p-4 bg-white/5 rounded-lg">
+                      <div className="flex items-center space-x-3">
+                        <Youtube className="w-6 h-6 text-red-400" />
+                        <span className="text-white">YouTube Views</span>
+                      </div>
+                      <span className="text-2xl font-bold text-red-400">5.8K</span>
+                    </div>
+                    <div className="flex items-center justify-between p-4 bg-white/5 rounded-lg">
+                      <div className="flex items-center space-x-3">
+                        <Eye className="w-6 h-6 text-blue-400" />
+                        <span className="text-white">Engagement Rate</span>
+                      </div>
+                      <span className="text-2xl font-bold text-blue-400">8.5%</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 p-6 rounded-lg border border-green-500/30">
+                    <CheckCircle className="w-12 h-12 text-green-400 mx-auto mb-4" />
+                    <h4 className="text-xl font-bold text-white mb-2">100% Real Results</h4>
+                    <p className="text-gray-300 mb-4">
+                      All followers and views are from real accounts. No bots or fake engagement.
+                    </p>
+                    <Link to="/dashboard">
+                      <Button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700">
+                        Try Demo Account
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Trust Indicators */}
+          <div className="text-center">
+            <div className="flex justify-center items-center space-x-8 mb-6">
+              <div className="flex items-center space-x-2">
+                <Shield className="w-6 h-6 text-green-400" />
+                <span className="text-white font-semibold">Safe & Secure</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Award className="w-6 h-6 text-yellow-400" />
+                <span className="text-white font-semibold">Guaranteed Results</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Users className="w-6 h-6 text-blue-400" />
+                <span className="text-white font-semibold">50K+ Satisfied Clients</span>
+              </div>
+            </div>
+            <p className="text-gray-300 text-sm">
+              ✅ Money Back Guarantee • ✅ 24/7 Support • ✅ Instant Delivery
+            </p>
           </div>
         </div>
       </section>
