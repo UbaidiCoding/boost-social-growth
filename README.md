@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/6ecea66b-bec8-4cf2-aacc-f41096d1f3d5
+**URL**: boost-social-growth.lovable.app
 
 ## How can I edit this code?
 
@@ -10,7 +10,7 @@ There are several ways of editing your application.
 
 **Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/6ecea66b-bec8-4cf2-aacc-f41096d1f3d5) and start prompting.
+Simply visit the [Lovable Project](boost-social-growth.lovable.app) and start prompting.
 
 Changes made via Lovable will be committed automatically to this repo.
 
@@ -62,7 +62,7 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/6ecea66b-bec8-4cf2-aacc-f41096d1f3d5) and click on Share -> Publish.
+Simply open [Lovable](boost-social-growth.lovable.app) and click on Share -> Publish.
 
 ## Can I connect a custom domain to my Lovable project?
 
