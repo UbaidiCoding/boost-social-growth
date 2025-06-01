@@ -27,13 +27,23 @@ Want full control using VS Code or another editor? Follow these steps:
 
 ```bash
 # Step 1: Clone the repository
-git clone <YOUR_GIT_URL>
+git clone https://github.com/UbaidiCoding/boost-social-growth.git
 
 # Step 2: Navigate to the project directory
-cd <YOUR_PROJECT_NAME>
+cd boost-social-growth
 
 # Step 3: Install dependencies
 npm install
 
 # Step 4: Start the development server
 npm run dev
+
+
+---
+
+✅ Would you like me to:
+- Add it as a downloadable `.md` file?
+- Push this to your GitHub repo in a pull request?
+- Add badges (Deploy, License, etc.) for a more professional look?
+
+Let me know!
